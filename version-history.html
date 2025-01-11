@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ServerVille Version History</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            min-height: 100vh;
+        }
+        h1, h2 {
+            color: #00ff00;
+            text-shadow: 2px 2px 5px #00ff00, 4px 4px 10px #00ff00;
+        }
+        .version {
+            margin-bottom: 30px;
+            border: 1px solid #00ff00;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: rgba(0, 255, 0, 0.1);
+            max-width: 380px;
+            margin-left: auto;
+            margin-right: auto; 
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        li::before {
+            content: "•";
+            color: #00ff00;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        #back-to-game {
+            position: fixed;
+            bottom: 20px;
+            right : 20px;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <h1>ServerVille Version History</h1>
+    <div class="versionbox">
+        <div class="version">
+            <h2>Latest: Version 0.3.2</h2>
+            <p>21.10.2024</p>
+            <ul>
+                <li>Fixed money per second display</li>
+                <li>Fixed money counter in quests</li>
+                <li>Fixed bug with quest fading out</li>
+				<li>Prepared vertical screen compatibility</li>
+                <li>Added: Tutorial Pages with multiple variants addapting to user behaviour</li>
+            </ul>
+        </div>
+    
+        <div class="version">
+            <p>Older versions:</p>
+            <h2>Version 0.3.1</h2>
+            <p>21.10.2024</p>
+            <ul>
+                <li>Finally added a system to generate money per second</li>
+            </ul>
+
+            <h2>Version 0.2.4</h2>
+            <p>20.10.2024</p>
+            <ul>
+                <li>Fixed bug with story popup design</li>
+                <li>Improved ascii graphics</li>
+            </ul>
+
+            <h2>Version 0.2.3</h2>
+            <p>20.10.2024</p>
+            <ul>
+                <li>GPU visual update</li>
+                <li>GPU for all Rack updates</li>
+            </ul>
+
+            <h2>Version 0.2.2</h2>
+            <p>20.10.2024</p>
+            <ul>
+                <li>Changed the way pictures are displayed</li>
+                <li>Changed the way the story popups are triggered</li>
+                <li>Changed the way story popups are displayed</li>
+                <li>Added: bitcoin picture in story</li>
+                <li>Added: one more story page, with two variants</li>
+            </ul>
+
+            <h2>Version 0.2.1</h2>
+            <p>20.10.2024</p>
+            <ul>
+                <li>Added: ESC Menu with restart button</li>
+                <li>Added: Change viewperspective with X</li>
+                <li>Added: First two page of storymode</li>
+            </ul>
+
+            <h2>Version 0.2.0</h2>
+            <p>19.10.2024</p>
+            <ul>
+                <li>Added: Autozoom out when grid size is increased</li>
+                <li>Added: Manuel zooming in/out</li>
+            </ul>
+
+            <h2>Version 0.1.4</h2>
+            <p>19.10.2024</p>
+            <ul>
+                <li><del>Added: Method to pause and save game</del></li>
+                <li><del>Added: Pausing game when going to version-history, resuming when returning</del></li>
+            </ul>
+
+            <h2>Version 0.1.3</h2>
+            <p>18.10.2024</p>
+            <ul>
+                <li>Replaced hardcoded arrangement with algorithm</li>
+                <li>Added: Quest system</li>
+            </ul>
+
+            <h2>Version 0.1.2</h2>
+            <p>17.10.2024</p>
+            <ul>
+                <li>Added: Upgrades</li>
+                <li>Added: Price evolution for GPUs and upgrades</li>
+            </ul>
+
+            <h2>Version 0.1.1</h2>
+            <p>15.10.2024</p>
+            <ul>
+                <li>Added: GPUs</li>
+                <li>Added: Debug menu</li>
+            </ul>
+
+            <h2>Version 0.1</h2>
+            <p>15.10.2024</p>
+            <ul>
+                <li>Server rack system visualized</li>
+                <li>Basic Buttons</li>
+            </ul>
+        </div>
+        
+        <div class="version">
+            <h2>In Development</h2>
+            <p>May be included in future versions:</p>
+            <ul>
+                <li>Language support</li>
+                <li>Money formatting for high numbers</li>
+                <li>Storymode updates</li>
+                <li>Save and Load, Pause and Resume</li>
+                <li>Click to collect hashes before continuing mining</li>
+                <li>Queue system (Upgrades / Autoclaim)</li>
+                <li>Fireprotection system</li>
+                <li>Power system</li>
+                <li>Grid system</li>
+            </ul>
+        </div>
+    </div>
+
+    <a id="back-to-game" href="game.html">Back to Game</a>
+
+    <script>
+        document.querySelector('#back-to-game').addEventListener('click', (e) => {
+            e.preventDefault();
+            if (window.opener && !window.opener.closed) {
+                window.opener.focus();
+            } else {
+                window.location.href = 'game.html';
+            }
+        });
+    </script>
+</body>
+</html>

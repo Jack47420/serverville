@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ServerVille</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="game-title">ServerVille</h1>
+    <p id="creator-credit">developed by Ingo Sodeik</p>
+    <p id="version-info">
+        <a href="version-history.html">version pre-alpha 0.3.2</a>
+    </p>
+    <div id="game-container">
+        <div id="debug-panel">
+            <div id="general-debug-info"></div>
+            <div id="selected-debug-info"></div>
+        </div>
+        <div id="quest-panel">
+            <h3 id="quest-panel-title">Quests</h3>
+            <div id="quest-list"></div>
+        </div>
+        <div id="grid-box">
+            <div id="grid-container" class="grid-2x2">
+            </div>
+        </div>
+        <div id="info-controls-box">
+            <div id="money-box">
+                <div id="money-info">Money: $0.00</div>
+                <div id="money-per-second">+ $0.00 /s</div>
+            </div>
+            <div id="controls">
+                <button id="buy-gpu" class="button">Buy GPU</button>
+                <button id="buy-serverrack" class="button">Buy Server Rack</button>
+                <button id="buy-upgrade" class="button">Buy Upgrade</button>
+            </div>
+        </div>
+        <div id="custom-popup" class="hidden">
+            <div id="popup-content">
+                <h3 id="popup-title"></h3>
+                <p id="popup-message"></p>
+            </div>
+        </div>
+        <div id="story-popup" class="hidden">
+            <div id="story-content">
+                <h3 id="story-title"></h3>
+                <p id="story-message"></p>
+            </div>
+        </div>
+    </div>
+    <script src="story/story1.js"></script>
+    <script src="story/quests.js"></script>
+    <script src="asciiArt/adminPic1.js"></script>
+    <script src="asciiArt/bitcoinPic.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
