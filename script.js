@@ -54,7 +54,6 @@ const ZOOM_SPEED = 0.2;
 const MIN_ZOOM = 0.1;
 const MAX_ZOOM = 3;
 
-// Add this near the top of your file with other variable declarations
 let isPopupOpen = false;
 let isDebugVisible = false;
 let viewSwitchActive = false;
@@ -100,6 +99,7 @@ function initializeGame() {
     document.getElementById('selected-debug-info').style.display = 'block';
     updateDebugInfo();
 }
+
 function initializeGrid() {
     const gridContainer = document.getElementById('grid-container');
     gridContainer.innerHTML = '';
@@ -243,6 +243,7 @@ function updateMoney() {
     updateMoneyCounter();
     updateQuestProgress('money', moneyPerSecond);
 }
+
 function updateMoneyCounter() {
     let tempMoney = money.toFixed(2);
     document.getElementById('money-info').innerText = `Money: $${tempMoney}`;
@@ -811,6 +812,7 @@ function updateDebugInfo() {
         selectedDebugInfo.innerHTML = '<h4>Selected Rack Info</h4><p>No rack selected</p>';
     }
 }
+
 function deselectRack() {
     if (selectedRack) {
         selectedRack.classList.remove('selected');
@@ -967,6 +969,7 @@ document.addEventListener('keydown', (event) => {
         showNextStoryPopup();
         return;
     }
+
     switch (event.key) {
         case 'Escape':
             if (selectedRack) {
@@ -1116,6 +1119,7 @@ function openMenu() {
     document.getElementById('settings-button').addEventListener('click', openSettings);
     document.getElementById('restart-button').addEventListener('click', restartGame);
 }
+
 function deselectRack() {
     if (selectedRack) {
         selectedRack.classList.remove('selected');
@@ -1147,7 +1151,7 @@ function openStoryPopup(title, content, asciiArt) {
         <pre>
         ${asciiArt}
         </pre>
- `;
+    `;
     storyPopup.classList.remove('hidden');
     isStoryOpen = true;
 
@@ -1166,5 +1170,3 @@ function closeStoryPopup() {
     // Remove the event listener
     storyPopup.removeEventListener('click', closeStoryPopup);
 }
-
-
